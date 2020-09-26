@@ -7,13 +7,13 @@ It's basic symfony application that runs on CloudRun.
 1. Build the image
 
 ```shell script
-gcloud builds submit --tag gcr.io/PROJECT-ID/helloworld
+gcloud builds submit --tag gcr.io/PROJECT-ID/cloudrun
 ```
 
 2. Deploy the image
 
 ```shell script
-gcloud run deploy --image gcr.io/PROJECT-ID/helloworld --platform managed
+gcloud run deploy --image gcr.io/PROJECT-ID/cloudrun --platform managed
 ```
 
 ## Resources
