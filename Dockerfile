@@ -53,4 +53,4 @@ RUN php bin/console cache:clear --no-warmup && \
   php bin/console cache:warmup
 
 # Let supervisord start nginx & php-fpm
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+ENTRYPOINT ["sh","-c","php-fpm -D && nginx -g 'daemon off;'"]
