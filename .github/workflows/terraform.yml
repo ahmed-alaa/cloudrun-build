@@ -17,6 +17,11 @@ jobs:
         uses: hashicorp/setup-terraform@v1
         with:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+      - name: Setup service key
+        run: 'echo "$SSH_KEY" > ./Infrastructure/terraform/gcp_service.json'
+        shell: bash
+        env:
+          SSH_KEY: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 #      - name: Terraform Format
 #        id: terraform_fmt
 #        run: terraform fmt -check ./Infrastructure/terraform
