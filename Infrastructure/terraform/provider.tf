@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 0.13"
+  required_version = ">= 0.13.5"
 
   required_providers {
     google = {
@@ -16,10 +16,7 @@ terraform {
   }
 }
 
-variable "service_account" {}
-
 provider "google" {
   project = var.gcp_project_id
   region  = var.gcp_region
-  credentials = var.service_account
 }
