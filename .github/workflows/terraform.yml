@@ -22,9 +22,6 @@ jobs:
         shell: bash
         env:
           SSH_KEY: ${{ secrets.GCP_SERVICE_ACCOUNT }}
-      - name: Terraform Format
-        id: terraform_fmt
-        run: terraform fmt -check ./Infrastructure/terraform
       - name: Terraform Init
         id: terraform_init
         run: terraform init ./Infrastructure/terraform
