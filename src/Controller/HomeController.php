@@ -13,7 +13,7 @@ class HomeController
         $number = random_int(0, 100);
 
         return new Response(
-            '<html><body>Lucky number: '.$number.'</body></html>'
+            '<html><body>Mr.Lucky number: '.$number.'</body></html>'
         );
     }
 }
