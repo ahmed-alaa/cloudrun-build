@@ -1,4 +1,4 @@
-resource "google_cloud_run_service" "cloudrun-symfony" {
+resource "google_cloud_run_service" "cloudrun_symfony" {
   name     = var.gcp_cloudrun_service_name
   location = var.gcp_region
 
@@ -21,9 +21,9 @@ data "google_iam_policy" "noauth" {
 }
 
 resource "google_cloud_run_service_iam_policy" "noauth" {
-  location    = google_cloud_run_service.default.location
-  project     = google_cloud_run_service.default.project
-  service     = google_cloud_run_service.default.name
+  location    = google_cloud_run_service.cloudrun_symfony.location
+  project     = google_cloud_run_service.cloudrun_symfony.project
+  service     = google_cloud_run_service.cloudrun_symfony.name
 
   policy_data = data.google_iam_policy.noauth.policy_data
 }
