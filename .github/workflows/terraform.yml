@@ -17,14 +17,14 @@ jobs:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
       - name: Terraform Format
         id: terraform_fmt
-        run: terraform fmt -check ../../Infrastructure/terraform
+        run: terraform fmt -check ./Infrastructure/terraform
       - name: Terraform Init
         id: terraform_init
-        run: terraform init ../../Infrastructure/terraform
+        run: terraform init ./Infrastructure/terraform
       - name: Terraform Plan
         id: terraform_plan
         if: github.event_name == 'pull_request'
-        run: terraform plan -no-color ../../Infrastructure/terraform
+        run: terraform plan -no-color ./Infrastructure/terraform
         continue-on-error: true
       - name: Update Pull Request
         uses: actions/github-script@0.9.0
@@ -53,4 +53,4 @@ jobs:
         run: exit 1
       - name: Terraform Apply
         if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-        run: terraform apply -auto-approve ../../Infrastructure/terraform
+        run: terraform apply -auto-approve ./Infrastructure/terraform
