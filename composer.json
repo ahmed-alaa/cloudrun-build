@@ -12,6 +12,7 @@
         "symfony/yaml": "5.1.*"
     },
     "require-dev": {
+        "damianopetrungaro/php-commitizen": "^0.2.0"
     },
     "config": {
         "optimize-autoloader": true,
