@@ -1,4 +1,7 @@
 {
+    "damianopetrungaro/php-commitizen": {
+        "version": "v0.2.0"
+    },
     "php": {
         "version": "7.3"
     },
