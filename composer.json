@@ -5,11 +5,11 @@
         "php": ">=7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/console": "5.2.6",
-        "symfony/dotenv": "5.2.5",
-        "symfony/flex": "1.12.2",
-        "symfony/framework-bundle": "5.2.6",
-        "symfony/yaml": "5.2.5"
+        "symfony/console": "5.4.36",
+        "symfony/dotenv": "5.4.35",
+        "symfony/flex": "1.21.6",
+        "symfony/framework-bundle": "5.4.36",
+        "symfony/yaml": "5.4.35"
     },
     "require-dev": {
         "damianopetrungaro/php-commitizen": "0.2.0"
